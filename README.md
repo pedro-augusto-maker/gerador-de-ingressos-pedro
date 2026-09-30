@@ -42,14 +42,12 @@ gerador-de-ingressos-pedro/
 
 ## Publicar no GitHub
 
-Crie um repositório público vazio no GitHub. No terminal do VS Code, aberto nesta pasta, execute os comandos abaixo e substitua `SEU-USUARIO` pelo nome de usuário do GitHub do estudante:
-
 ```bash
 git init
 git add .
 git commit -m "feat: criar gerador de ingressos Dev Paraná"
 git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/gerador-de-ingressos-pedro.git
+git remote add origin https://github.com/pedro-augusto-maker/gerador-de-ingressos-pedro.git
 git push -u origin main
 ```
 
