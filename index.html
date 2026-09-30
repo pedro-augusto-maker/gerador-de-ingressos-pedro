@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8f5">
+    <meta name="description" content="Crie seu ingresso personalizado para o Encontro Dev Paraná 2026.">
+    <title>Encontro Dev Paraná 2026 | Ingresso</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+    <main class="page-shell" id="conteudo-principal">
+      <header class="site-header">
+        <a class="brand" href="#conteudo-principal" aria-label="Dev Paraná — início">
+          <img src="assets/logo-mark.svg" alt="" width="34" height="34">
+          <span>dev<span class="brand-accent">paraná</span></span>
+        </a>
+        <span class="edition-tag"><span class="edition-dot" aria-hidden="true"></span> EDIÇÃO 2026</span>
+      </header>
+
+      <section class="intro" id="intro" aria-labelledby="titulo-principal">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> TECNOLOGIA FEITA EM COMUNIDADE</p>
+        <h1 id="titulo-principal">Uma nova ideia começa com <span>você.</span></h1>
+        <p class="intro-copy">Reserve seu lugar no encontro de quem aprende, compartilha e constrói o futuro digital do Paraná.</p>
+      </section>
+
+      <form class="ticket-form" id="ticket-form" novalidate>
+        <div class="form-heading">
+          <div>
+            <p class="step-label">SUA INSCRIÇÃO <span>01 / 01</span></p>
+            <h2>Vamos preparar seu ingresso</h2>
+          </div>
+          <span class="heading-spark" aria-hidden="true">✳</span>
+        </div>
+
+        <div class="avatar-field">
+          <span class="field-label" id="avatar-label">Sua foto de perfil</span>
+          <input class="visually-hidden" id="avatar-upload" name="avatar" type="file" accept="image/png,image/jpeg" tabindex="-1">
+
+          <button class="upload-zone" id="avatar-trigger" type="button" aria-labelledby="avatar-label" aria-describedby="avatar-help avatar-error" aria-invalid="false">
+            <span class="upload-default" id="upload-default">
+              <span class="upload-icon-box">
+                <img src="assets/icon-upload.svg" alt="" width="24" height="24">
+              </span>
+              <span class="upload-copy"><strong>Clique para escolher</strong><span>ou arraste sua imagem até aqui</span></span>
+            </span>
+            <img class="avatar-preview" id="avatar-preview" alt="" hidden>
+          </button>
+
+          <div class="avatar-actions" id="avatar-actions" hidden>
+            <button class="text-button" id="remove-avatar" type="button">Remover foto</button>
+            <span aria-hidden="true">·</span>
+            <button class="text-button" id="change-avatar" type="button">Trocar imagem</button>
+          </div>
+
+          <div class="helper-row">
+            <img src="assets/icon-info.svg" alt="" width="16" height="16">
+            <p id="avatar-help">JPG ou PNG · até 500 KB</p>
+          </div>
+          <p class="field-error" id="avatar-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label class="field-label" for="full-name">Nome completo</label>
+          <input class="text-input" id="full-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Como devemos chamar você?" aria-describedby="name-error" aria-invalid="false" required>
+          <p class="field-error" id="name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label class="field-label" for="email">E-mail</label>
+          <input class="text-input" id="email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="120" placeholder="voce@exemplo.com" aria-describedby="email-error" aria-invalid="false" required>
+          <p class="field-error" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label class="field-label" for="github-username">Usuário do GitHub</label>
+          <div class="input-with-prefix">
+            <span aria-hidden="true">@</span>
+            <input class="text-input" id="github-username" name="github" type="text" autocomplete="username" maxlength="39" placeholder="seuusuario" aria-describedby="github-help github-error" aria-invalid="false" required>
+          </div>
+          <p class="field-hint" id="github-help">Seu perfil também vai no ingresso.</p>
+          <p class="field-error" id="github-error" aria-live="polite"></p>
+        </div>
+
+        <p class="form-status visually-hidden" id="form-status" role="status" aria-live="assertive"></p>
+        <button class="submit-button" type="submit"><span>Gerar meu ingresso</span><span aria-hidden="true">↗</span></button>
+        <p class="privacy-note"><span aria-hidden="true">✦</span> Seus dados ficam apenas neste navegador.</p>
+      </form>
+
+      <section class="ticket-result" id="ticket-result" aria-labelledby="result-title" hidden>
+        <p class="eyebrow"><span aria-hidden="true">✳</span> INSCRIÇÃO CONFIRMADA</p>
+        <h1 id="result-title">Está confirmado, <span id="result-name"></span>!</h1>
+        <p class="result-message">Seu ingresso está pronto para <strong id="result-email"></strong>. Agora é só guardar essa página.</p>
+
+        <article class="generated-ticket" aria-label="Ingresso personalizado do Encontro Dev Paraná">
+          <div class="ticket-main">
+            <div class="ticket-topline">
+              <div class="brand ticket-brand" aria-label="Dev Paraná">
+                <img src="assets/logo-mark.svg" alt="" width="31" height="31">
+                <span>dev<span class="brand-accent">paraná</span></span>
+              </div>
+              <span class="ticket-label">INGRESSO PRESENCIAL</span>
+            </div>
+            <div class="event-details">
+              <h2>Encontro Dev Paraná</h2>
+              <p class="event-date">
+                <time datetime="2026-10-24">24 out, 2026</time>
+                <span aria-hidden="true">•</span>
+                <span>Maringá, PR</span>
+              </p>
+              <p class="event-subtitle">Ideias que conectam. Pessoas que transformam.</p>
+            </div>
+            <span class="ticket-watermark" aria-hidden="true">✳</span>
+          </div>
+
+          <div class="ticket-stub">
+            <span class="ticket-number" id="ticket-number">#00000</span>
+            <div class="attendee">
+              <img class="attendee-avatar" id="result-avatar" alt="">
+              <div class="attendee-details">
+                <h3 id="ticket-name"></h3>
+                <p class="attendee-handle">
+                  <img src="assets/icon-github.svg" alt="" width="17" height="17">
+                  <span id="ticket-github"></span>
+                </p>
+              </div>
+            </div>
+            <span class="ticket-admit">ADMIT ONE</span>
+          </div>
+        </article>
+
+        <button class="reset-button" id="reset-button" type="button">Fazer outra inscrição</button>
+      </section>
+
+      <footer class="page-footer">
+        <span class="footer-mark" aria-hidden="true">✳</span>
+        <span>ENCONTRO DEV PARANÁ</span>
+        <span class="footer-separator" aria-hidden="true">/</span>
+        <span>CIANORTE · 2026</span>
+      </footer>
+    </main>
+  </body>
+</html>
